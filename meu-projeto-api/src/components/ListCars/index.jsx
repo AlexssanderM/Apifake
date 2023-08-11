@@ -52,7 +52,7 @@ const ItemLink = styled.a`
   text-decoration: none;
 `
 
-export default function ListCars(cars) {
+export default function ListCars({cars}) {
     return(
     <>
         <ItemLink href={cars.url} target="_blank">

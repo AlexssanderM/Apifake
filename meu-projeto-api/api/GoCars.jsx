@@ -8,7 +8,7 @@ export function getCars(){
         },
         {
             "title": "Porsche 911",
-            "image": "https://www.revistafullpower.com.br/wp-content/uploads/2017/11/Porsche-911-GT2-Auction-6.jpg",
+            "img": "https://www.revistafullpower.com.br/wp-content/uploads/2017/11/Porsche-911-GT2-Auction-6.jpg",
             "price": 10000.00,
             "url": "https://www.webmotors.com.br/carros/estoque/porsche/911/de.1995"
         }
