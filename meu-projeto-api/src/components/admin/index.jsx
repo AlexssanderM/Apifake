@@ -5,7 +5,6 @@ const ItemPrincipal = styled.div`
   border-radius: 4px;
   background-color: #fff;
   height:120px;
-  width: 400px;
   color:#29303b;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -13,8 +12,8 @@ const ItemPrincipal = styled.div`
 `;
 
 const Thumbnail = styled.img`
-  width: 50%;
-  height: 100%;
+  width: 20%;
+  height: 100%; 
   border: 0;
   vertical-align: middle;
   float: left;
@@ -30,7 +29,7 @@ const Price = styled.div`
   margin-bottom: 5px;
 `;
 
-const Button = styled.div`
+const ButtonA = styled.div`
   display: inline-block;
   margin-bottom: -60px;
   font-weight: 400;
@@ -48,11 +47,30 @@ const Button = styled.div`
 
 `;
 
+const ButtonB = styled.a`
+  display: inline-block;
+  margin-bottom: -60px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: 14px;
+  padding: 8px 15px;
+  color: #fff;
+  background-color: #1414d2;
+  border-color: #6d6dec;
+  border-radius: 4px;
+
+`;
+
+
 const ItemLink = styled.a`
   text-decoration: none;
 `
 
-export default function ListCars({cars}) {
+export default function Contradmin({cars}) {
     return(
     <>
         <ItemLink href={cars.url} target="_blank">
@@ -60,7 +78,8 @@ export default function ListCars({cars}) {
                 <Thumbnail src={cars.img}/>
                 <Title>{cars.title}</Title>
                 <Price>{cars.price}</Price>
-                <Button>Comprar</Button>
+                <ButtonA>Modificar</ButtonA>
+                <ButtonB>Deletar</ButtonB>
             </ItemPrincipal>
         </ItemLink>
     </>

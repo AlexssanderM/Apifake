@@ -1,52 +1,14 @@
-import React, { useState, useEffect } from "react";
-import ListCars from './components/ListCars';
-import {styled} from 'styled-components'
-import api from './services/api';
+// hooks react
+import React from "react";
+import Root from './routes/Root'
 
-const Principal = styled.div`
-  max-width: 960px;
-  margin: 30px auto;
-`;
-
-const ListContainerCars = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #ccc;
-  padding: 10px;
-  `;
-
-function App() {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    const url = '/cars';
-
-    api.get(url) //all
-      .then((response) => {
-        // console.log(response)
-        setCars(response.data)
-      })
-
-  }, [])
-
+function app() {
   return (
-    <Principal>
-      <h1>Carros em estoque</h1>
-      <ListContainerCars>
-        {
-          cars.map(cars => {
-            return (<ListCars
-              key={cars.url}
-              cars={cars}
-            />)
-          })
-        }
-      </ListContainerCars>
-    </Principal>
+
+    <>
+    <Root />
+    </>
   )
 }
 
-export default App
-
+export default app
